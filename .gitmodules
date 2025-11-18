@@ -1,0 +1,3 @@
+[submodule "pkgs/portal-escape"]
+	path = pkgs/portal-escape
+	url = git@github.com:Computerdores/portal-escape.git
