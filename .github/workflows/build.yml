@@ -6,10 +6,8 @@ on:
       - main
       - master
   schedule:
-    # rebuild everyday at 2:51
-    # TIP: Choose a random time here so not all repositories are build at once:
-    # https://www.random.org/clock-times/?num=1&earliest=01%3A00&latest=08%3A00&interval=5&format=html&rnd=new
-    - cron:  '51 2 * * *'
+    # rebuild everyday at 1:35
+    - cron:  '35 1 * * *'
   workflow_dispatch:
 jobs:
   tests:
@@ -31,7 +29,7 @@ jobs:
         # For this to work, you also need to set the CACHIX_SIGNING_KEY or
         # CACHIX_AUTH_TOKEN secret in your repository secrets settings in
         # Github found at
-        # https://github.com/<your_githubname>/nur-packages/settings/secrets
+        # https://github.com/Computerdores/nurpkgs/settings/secrets
         cachixName:
           - <YOUR_CACHIX_NAME>
         nixPath:
@@ -42,6 +40,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v5
+      with:
+        submodules: true
     - name: Install nix
       uses: cachix/install-nix-action@v31
       with:
