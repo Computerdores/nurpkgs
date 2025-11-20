@@ -14,5 +14,5 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  portal-escape = pkgs.callPackage ./pkgs/portal-escape/derivation.nix {};
+  portal-escape = pkgs.callPackage ./pkgs/portal-escape/default.nix {};
 }
