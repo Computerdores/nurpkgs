@@ -4,7 +4,7 @@ let
   src = pkgs.fetchFromGitHub {
     owner = "Computerdores";
     repo = "portal-escape";
-    rev = "8ae22d751da10d33fe6a65d02b96c58198e74821";
-    sha256 = "sha256-eLOlqSac+Lt9159UiHLSp5w22BzimHT22ueS0n5MfSo=";
+    rev = "f1132a8e508d7fdae5938ee5bbe63799ab4b289d";
+    sha256 = "sha256-wus80g8I32mvV7hoOL+aRvEd1OqTt8jSYJMRreipfoc=";
   };
 in pkgs.callPackage (src + "/derivation.nix") { }
